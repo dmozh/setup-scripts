@@ -5,7 +5,7 @@ echo ${ALPINE_VERSION}
 
 TEMP_FILE=$(mktemp)
 
-wget ${MIRRORS_LIST:="https://github.com/dmozh/setup-scripts/blob/master/alpine/MIRRORS.txt"} -O $TEMP_FILE
+wget ${MIRRORS_LIST:="https://github.com/dmozh/setup-scripts/raw/master/alpine/MIRRORS.txt"} -O $TEMP_FILE
 
 for mirror in $(head -${MIRRORS_COUNT:=5} $TEMP_FILE)
 do
