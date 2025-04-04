@@ -6,11 +6,11 @@ ALPINE_VERSION="v$(cut -d. -f1 /etc/alpine-release).$(cut -d. -f2 /etc/alpine-re
 
 TEMP_FILE=$(mktemp)
 
-function clear {
-  rm $TEMP_FILE $0
-}
+# function clear {
+#   rm $TEMP_FILE $0
+# }
 
-trap clear EXIT
+# trap clear EXIT
 
 wget ${MIRRORS_LIST:="https://github.com/dmozh/setup-scripts/blob/master/alpine/MIRRORS.txt"} -O $TEMP_FILE
 
