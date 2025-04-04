@@ -13,4 +13,4 @@ do
   echo "${mirror}${ALPINE_VERSION}/community" >> /etc/apk/repositories
 done
 
-lbu ci
+lbu package
