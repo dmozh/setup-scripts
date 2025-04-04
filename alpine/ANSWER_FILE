@@ -23,7 +23,7 @@ TIMEZONEOPTS="-z UTC"
 PROXYOPTS="none"
 
 # Add a random mirror
-APKREPOSOPTS="3"
+APKREPOSOPTS="https://mirror.yandex.ru/mirrors/alpine/v3.21/main/"
 
 # Install Openssh
 SSHDOPTS="-c openssh"
