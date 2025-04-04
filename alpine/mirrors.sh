@@ -1,10 +1,9 @@
 #!/bin/sh
 
-apk add wget
-
 ALPINE_VERSION="v$(cut -d. -f1 /etc/alpine-release).$(cut -d. -f2 /etc/alpine-release)"
+echo ${ALPINE_VERSION}
 
-TEMP_FILE=$(mktemp)
+# TEMP_FILE=$(mktemp)
 
 # function clear {
 #   rm $TEMP_FILE $0
@@ -12,10 +11,10 @@ TEMP_FILE=$(mktemp)
 
 # trap clear EXIT
 
-wget ${MIRRORS_LIST:="https://github.com/dmozh/setup-scripts/blob/master/alpine/MIRRORS.txt"} -O $TEMP_FILE
+# wget ${MIRRORS_LIST:="https://github.com/dmozh/setup-scripts/blob/master/alpine/MIRRORS.txt"} -O $TEMP_FILE
 
-for mirror in $(head -${MIRRORS_COUNT:=5} $TEMP_FILE)
-do
-  echo "${mirror}${ALPINE_VERSION}/main" >> /etc/apk/repositories
-  echo "${mirror}${ALPINE_VERSION}/community" >> /etc/apk/repositories
-done
+# for mirror in $(head -${MIRRORS_COUNT:=5} $TEMP_FILE)
+# do
+#   echo "${mirror}${ALPINE_VERSION}/main" >> /etc/apk/repositories
+#   echo "${mirror}${ALPINE_VERSION}/community" >> /etc/apk/repositories
+# done
