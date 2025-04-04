@@ -12,3 +12,5 @@ do
   echo "${mirror}${ALPINE_VERSION}/main" >> /etc/apk/repositories
   echo "${mirror}${ALPINE_VERSION}/community" >> /etc/apk/repositories
 done
+
+lbu ci
