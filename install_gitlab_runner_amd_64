@@ -1,0 +1,11 @@
+apt install curl wget
+curl -L --output /usr/local/bin/gitlab-runner "https://s3.dualstack.us-east-1.amazonaws.com/gitlab-runner-downloads/latest/binaries/gitlab-runner-linux-amd64"
+chmod +x /usr/local/bin/gitlab-runner
+useradd --comment 'GitLab Runner' --create-home gitlab-runner --shell /bin/bash
+gitlab-runner install --user=gitlab-runner --working-directory=/home/gitlab-runner
+gitlab-runner start
+
+mkdir -p /usr/local/bin/out/helper-images
+cd /usr/local/bin/out/helper-images
+
+wget https://s3.dualstack.us-east-1.amazonaws.com/gitlab-runner-downloads/latest/helper-images/prebuilt-ubuntu-x86_64.tar.xz
