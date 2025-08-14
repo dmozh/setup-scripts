@@ -9,3 +9,8 @@ bash -c "$(wget -qLO - https://github.com/dmozh/setup-scripts/raw/master/setup_s
 ```bash
 bash -c "$(wget -qLO - https://github.com/dmozh/setup-scripts/raw/master/docker_install.sh)"
 ```
+
+## run script to prepare
+```bash
+bash -c "$(wget -qLO - https://github.com/dmozh/setup-scripts/raw/master/prepare.sh)"
+```
